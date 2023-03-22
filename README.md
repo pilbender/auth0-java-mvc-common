@@ -24,7 +24,7 @@
 
 ### Requirements
 
-Java 8 or above and `javax.servlet` version 3.
+Java 17 or above and `jakarta.servlet` version 6.
 
 > If you are using Spring, we recommend leveraging Spring's OIDC and OAuth2 support, as demonstrated by the [Spring Boot Quickstart](https://auth0.com/docs/quickstart/webapp/java-spring-boot).
 
@@ -36,14 +36,19 @@ Add the dependency via Maven:
 <dependency>
   <groupId>com.auth0</groupId>
   <artifactId>mvc-auth-commons</artifactId>
-  <version>1.9.4</version>
+  <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
 
 or Gradle:
 
 ```gradle
-implementation 'com.auth0:mvc-auth-commons:1.9.4'
+implementation 'com.auth0:mvc-auth-commons:0.0.1-SNAPSHOT'
+```
+
+### Build and install to local Maven without tests, they don't work with this version
+```
+gradlew install -x test
 ```
 
 ### Configure Auth0
