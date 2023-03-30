@@ -8,12 +8,13 @@ apply plugin: 'maven'
 repositories {
     mavenLocal()
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 jar {
     enabled = true
 }
 
-group 'com.auth0'
+group 'com.github.pilbender'
 
 logger.lifecycle("Using version ${version} for ${name} group $group")
 
